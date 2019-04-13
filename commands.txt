@@ -19,3 +19,15 @@ docker image ls
 docker container ls
 docker container ls --all
 docker container ls -aq
+
+## Stops all running containers 
+docker stop $(docker ps -a -q)
+
+## Removes all stopped containers
+docker rm $(docker ps -a -q)
+OR
+docker container prune
+
+## Restarts container
+docker restart <containerId>
+
